@@ -1106,6 +1106,16 @@ let sched;
   const raw=readK(SCHKEY);
   if(raw){ try{ sched=JSON.parse(raw); }catch(e){ sched=null; } }
   if(!sched||!sched.weeks) sched=seedSched();
+  /* migrate flat-key employees to shifts object */
+  for(const w of sched.weeks){
+    if(!w.employees) continue;
+    for(const emp of w.employees){
+      if(!emp.shifts){
+        emp.shifts={};
+        for(const k of SCH_KEYS){ emp.shifts[k]=emp[k]||""; delete emp[k]; }
+      }
+    }
+  }
 })();
 function saveSched(){ return writeK(SCHKEY,JSON.stringify(sched)); }
 let schWeek=0;
