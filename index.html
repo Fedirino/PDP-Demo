@@ -1089,16 +1089,16 @@ const SCH_KEYS=["sun","mon","tue","wed","thu","fri","sat"];
 const SCH_DAYS_SHORT=["S","M","T","W","T","F","S"];
 function seedSched(){ return { weeks:[
   { label:"This Week", startDate:"", employees:[
-    {name:"Alex M.",sun:"Off",mon:"6a-2p",tue:"6a-2p",wed:"Off",thu:"6a-2p",fri:"6a-2p",sat:"6a-12p"},
-    {name:"Jordan T.",sun:"8a-4p",mon:"Off",tue:"8a-4p",wed:"8a-4p",thu:"Off",fri:"8a-4p",sat:"8a-4p"},
-    {name:"Sam R.",sun:"Off",mon:"10a-6p",tue:"Off",wed:"10a-6p",thu:"10a-6p",fri:"10a-6p",sat:"Off"},
-    {name:"Casey L.",sun:"7a-3p",mon:"7a-3p",tue:"Off",wed:"7a-3p",thu:"Off",fri:"Off",sat:"7a-3p"}
+    {name:"Alex M.",shifts:{sun:"Off",mon:"6a-2p",tue:"6a-2p",wed:"Off",thu:"6a-2p",fri:"6a-2p",sat:"6a-12p"}},
+    {name:"Jordan T.",shifts:{sun:"8a-4p",mon:"Off",tue:"8a-4p",wed:"8a-4p",thu:"Off",fri:"8a-4p",sat:"8a-4p"}},
+    {name:"Sam R.",shifts:{sun:"Off",mon:"10a-6p",tue:"Off",wed:"10a-6p",thu:"10a-6p",fri:"10a-6p",sat:"Off"}},
+    {name:"Casey L.",shifts:{sun:"7a-3p",mon:"7a-3p",tue:"Off",wed:"7a-3p",thu:"Off",fri:"Off",sat:"7a-3p"}}
   ]},
   { label:"Next Week", startDate:"", employees:[
-    {name:"Alex M.",sun:"Off",mon:"6a-2p",tue:"6a-2p",wed:"6a-2p",thu:"Off",fri:"6a-2p",sat:"6a-12p"},
-    {name:"Jordan T.",sun:"8a-4p",mon:"8a-4p",tue:"Off",wed:"Off",thu:"8a-4p",fri:"8a-4p",sat:"8a-4p"},
-    {name:"Sam R.",sun:"Off",mon:"Off",tue:"10a-6p",wed:"10a-6p",thu:"10a-6p",fri:"10a-6p",sat:"Off"},
-    {name:"Casey L.",sun:"7a-3p",mon:"7a-3p",tue:"7a-3p",wed:"Off",thu:"Off",fri:"7a-3p",sat:"7a-3p"}
+    {name:"Alex M.",shifts:{sun:"Off",mon:"6a-2p",tue:"6a-2p",wed:"6a-2p",thu:"Off",fri:"6a-2p",sat:"6a-12p"}},
+    {name:"Jordan T.",shifts:{sun:"8a-4p",mon:"8a-4p",tue:"Off",wed:"Off",thu:"8a-4p",fri:"8a-4p",sat:"8a-4p"}},
+    {name:"Sam R.",shifts:{sun:"Off",mon:"Off",tue:"10a-6p",wed:"10a-6p",thu:"10a-6p",fri:"10a-6p",sat:"Off"}},
+    {name:"Casey L.",shifts:{sun:"7a-3p",mon:"7a-3p",tue:"7a-3p",wed:"Off",thu:"Off",fri:"7a-3p",sat:"7a-3p"}}
   ]}
 ]}; }
 let sched;
